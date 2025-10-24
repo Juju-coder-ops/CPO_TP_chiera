@@ -4,6 +4,8 @@
  */
 package tp1_manipnombresint_chiera.escoffier;
 
+import java.util.Scanner;
+
 /**
  * date 24/10
  * @author juliette
@@ -11,11 +13,21 @@ package tp1_manipnombresint_chiera.escoffier;
  */
 public class TP1_manipNombresInt_CHIERAESCOFFIER {
 
+    private static int nb1;
+    private static int nb2;
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in); 
+        System.out.println("Entrer le nombre 1 :");  
+        nb1=sc.nextInt();
+        System.out.println("Entrer le nombre 2 :");  
+        nb2=sc.nextInt(); 
+        System.out.println("La somme de vos nombres est : " + (nb1+nb2));
+        System.out.println("La difference de vos nombres est : " + (nb1-nb2));
+        System.out.println("Le produit de vos nombres est : " + (nb1*nb2));
     }
     
 }
