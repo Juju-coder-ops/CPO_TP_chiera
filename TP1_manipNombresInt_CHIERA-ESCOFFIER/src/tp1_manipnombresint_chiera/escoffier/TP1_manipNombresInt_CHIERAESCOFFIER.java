@@ -28,6 +28,8 @@ public class TP1_manipNombresInt_CHIERAESCOFFIER {
         System.out.println("La somme de vos nombres est : " + (nb1+nb2));
         System.out.println("La difference de vos nombres est : " + (nb1-nb2));
         System.out.println("Le produit de vos nombres est : " + (nb1*nb2));
+        System.out.println("Le quotient entier de vos nombres est : " + (nb1/nb2));
+        System.out.println("Le reste de la division euclidienne de vos nombres est : " + (nb1%nb2));
     }
     
 }
