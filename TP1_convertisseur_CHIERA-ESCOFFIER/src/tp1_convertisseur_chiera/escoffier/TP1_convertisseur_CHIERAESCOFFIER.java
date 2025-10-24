@@ -19,6 +19,11 @@ public class TP1_convertisseur_CHIERAESCOFFIER {
      * @param args the command line arguments
      */
     public static double CelciusVersKelvin (double c) {return c+273;};
+    public static double KelvinVersCelcius (double k) {return k-273;};
+    public static double FarenheitVersCelcius (double f) {return f*1.0/33.8;};
+    public static double CelciusVersFarenheit (double c) {return c*33.8;};
+    public static double KelvinVersFarenheit (double k) {return CelciusVersFarenheit(KelvinVersCelcius(k));};
+    public static double FarenheitVersKelvin (double f) {return FarenheitVersCelcius(CelciusVersKelvin(f));};
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in); 
