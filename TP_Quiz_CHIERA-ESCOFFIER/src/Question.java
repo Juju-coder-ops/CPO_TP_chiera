@@ -8,6 +8,10 @@
  * @author julie
  */
 public class Question {
+
+    static void setText(String intitule) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private String intitule;
     private String proposition1;
     private String proposition2;
