@@ -17,17 +17,20 @@ public class fenetre_quiz extends javax.swing.JFrame {
     public fenetre_quiz() {
         initComponents();
         questions = new Question[]{
-        new Question("Capitale de la France ?", "Paris", "Madrid", "Berlin", "Rome", 1),
-        new Question("3 x 7 = ?", "20", "21", "18", "25", 2),
-        new Question("Couleur du ciel ?", "Rouge", "Bleu", "Vert", "Noir", 2),
-        new Question("Langage utilisé?", "Java", "Python", "C#", "Ruby", 1),
-        new Question("Résultat de 10/2 ?", "4", "5", "6", "2", 2)
+            new Question("Capitale de la France ?", "Paris", "Madrid", "Berlin", "Rome", 1),
+            new Question("3 x 7 = ?", "20", "21", "18", "25", 2),
+            new Question("Couleur du ciel ?", "Rouge", "Bleu", "Vert", "Noir", 2),
+            new Question("Langage utilisé?", "Java", "Python", "C#", "Ruby", 1),
+            new Question("Résultat de 10/2 ?", "4", "5", "6", "2", 2)
         };
+        
+        afficherQuestionCourante();
+        
     }
     private void afficherQuestionCourante() {
         Question q = questions[index];
 
-        Question.setText(q.getIntitule());
+        lblQuestions.setText(q.getIntitule());
         btnRep1.setText(q.getProposition1());
         btnRep2.setText(q.getProposition2());
         btnRep3.setText(q.getProposition3());
@@ -40,23 +43,6 @@ public class fenetre_quiz extends javax.swing.JFrame {
         btnRep2.setEnabled(true);
         btnRep3.setEnabled(true);
         btnRep4.setEnabled(true);
-    }
-    private void gererReponse(int indexRep) {
-        Question q = questions[index];
-
-        if(indexRep == q.getIndexBonneReponse()) {
-            lblFeedback.setText("Bonne réponse !");
-            score++;
-            lblScore.setText("Score : " + score);
-        } else {
-            lblFeedback.setText("Mauvaise réponse !");
-        }
-
-        // désactiver tous les boutons
-        btnRep1.setEnabled(false);
-        btnRep2.setEnabled(false);
-        btnRep3.setEnabled(false);
-        btnRep4.setEnabled(false);
     }
     private void gererReponse(int indexRep) {
     Question q = questions[index];
@@ -74,8 +60,7 @@ public class fenetre_quiz extends javax.swing.JFrame {
     btnRep2.setEnabled(false);
     btnRep3.setEnabled(false);
     btnRep4.setEnabled(false);
-}
-
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -96,8 +81,10 @@ public class fenetre_quiz extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblQuestions.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblQuestions.setText("Questions");
 
+        btnRep1.setBackground(new java.awt.Color(255, 153, 255));
         btnRep1.setText("jButton1");
         btnRep1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +92,7 @@ public class fenetre_quiz extends javax.swing.JFrame {
             }
         });
 
+        btnRep2.setBackground(new java.awt.Color(255, 153, 255));
         btnRep2.setText("jButton2");
         btnRep2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +100,7 @@ public class fenetre_quiz extends javax.swing.JFrame {
             }
         });
 
+        btnRep3.setBackground(new java.awt.Color(255, 153, 255));
         btnRep3.setText("jButton3");
         btnRep3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +108,7 @@ public class fenetre_quiz extends javax.swing.JFrame {
             }
         });
 
+        btnRep4.setBackground(new java.awt.Color(255, 153, 255));
         btnRep4.setText("jButton4");
         btnRep4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,10 +116,16 @@ public class fenetre_quiz extends javax.swing.JFrame {
             }
         });
 
+        lblFeedback.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 48)); // NOI18N
+        lblFeedback.setForeground(new java.awt.Color(255, 51, 204));
+        lblFeedback.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFeedback.setText("feedback");
 
-        lblScore.setText("Score");
+        lblScore.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        lblScore.setForeground(new java.awt.Color(255, 0, 204));
+        lblScore.setText("Score : 0");
 
+        btnNext.setBackground(new java.awt.Color(255, 204, 255));
         btnNext.setText("Next");
         btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,27 +141,25 @@ public class fenetre_quiz extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(lblScore)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnRep1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                    .addComponent(btnRep3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnRep2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                    .addComponent(btnRep4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(49, 49, 49))
+            .addComponent(lblQuestions, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblQuestions)
-                        .addGap(159, 159, 159))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRep1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnRep3))
-                        .addGap(73, 73, 73)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRep4)
-                            .addComponent(btnRep2))
-                        .addGap(72, 72, 72))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblFeedback)
-                        .addGap(170, 170, 170))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnNext)
-                        .addContainerGap())))
+                .addContainerGap()
+                .addComponent(lblFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnNext)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,11 +176,11 @@ public class fenetre_quiz extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRep3)
                     .addComponent(btnRep4))
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(lblFeedback)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(btnNext)
-                .addGap(22, 22, 22))
+                .addContainerGap())
         );
 
         pack();
