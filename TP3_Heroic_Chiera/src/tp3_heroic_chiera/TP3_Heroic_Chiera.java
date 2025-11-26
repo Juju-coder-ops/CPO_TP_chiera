@@ -18,7 +18,6 @@ public class TP3_Heroic_Chiera {
 
         Epee excalibur = new Epee("Excalibur", 7, 5);
         Epee durandal = new Epee("Durandal", 4, 7);
-
         Baton chene = new Baton("Chêne", 4, 5);
         Baton charme = new Baton("Charme", 5, 6);
 
@@ -30,7 +29,6 @@ public class TP3_Heroic_Chiera {
         
         Magicien gandalf = new Magicien("Gandalf", 65, true);
         Magicien garcimore = new Magicien("Garcimore", 44, false);
-
         Guerrier conan = new Guerrier("Conan", 78, false);
         Guerrier lannister = new Guerrier("Lannister", 45, true);
 
@@ -48,6 +46,7 @@ public class TP3_Heroic_Chiera {
         Epee durandal2 = new Epee("Durandal", 4, 7);
         Baton chene2 = new Baton("Chêne", 4, 5);
 
+        
         // Ajout d’armes
         gandalf.ajouterArme(chene);
         gandalf.ajouterArme(excalibur);
@@ -61,6 +60,37 @@ public class TP3_Heroic_Chiera {
         // Affichage final
         System.out.println(gandalf);
         System.out.println(conan);
-    }
-    
+        
+        
+        conan.seFatiguer();
+        System.out.println("Conan vivant ? " + conan.estVivant());
+
+        conan.attaquer(gandalf);
+        System.out.println(gandalf);
+
+
+        System.out.println("\n=== MORRRRTAL COMBAT ===");
+
+        Magicien novice = new Magicien("Novice",50,false);
+        Guerrier chevalier = new Guerrier("Chevalier",80,true);
+
+        novice.ajouterArme(chene);
+        novice.ajouterArme(durandal);
+        novice.equiperParNom("Chêne");
+
+        chevalier.ajouterArme(charme);
+        chevalier.ajouterArme(excalibur);
+        chevalier.equiperParNom("Excalibur");
+
+        novice.attaquer(chevalier);
+        System.out.println(chevalier);
+
+        chevalier.attaquer(novice);
+        System.out.println(novice);
+
+        System.out.println("\nNovice vivant ? " + novice.estVivant());
+        System.out.println("Chevalier vivant ? " + chevalier.estVivant());
+
+        System.out.println("\n=== FIN TP3 ===");
+    }   
 }

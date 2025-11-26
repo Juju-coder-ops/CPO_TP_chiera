@@ -17,12 +17,15 @@ public abstract class Personnage implements EtreVivant {
   
     protected ArrayList<Arme> inventaire;
     protected Arme armeEnMain;
-
+    
+    public static int nbPerso = 0;
+    
     public Personnage(String nom, int niveauVie) {
         this.nom = nom;
         this.niveauVie = niveauVie;
         this.inventaire = new ArrayList<>();  // tableau dynamique vide au départ
         this.armeEnMain = null; // aucune arme équipée au début
+        nbPerso++;
     }
 
     public String getNom() {
@@ -79,7 +82,9 @@ public abstract class Personnage implements EtreVivant {
         System.out.println(nom + " est attaqué : -" + points + " vie. Vie restante = " + niveauVie);
     }
     
-    @Override
+     public abstract void attaquer(Personnage p);
+    
+     @Override
     public String toString() {
         String armeTxt = (armeEnMain == null ? "Aucune arme équipée" : armeEnMain.toString());
         return nom + " (vie = " + niveauVie + ") | Arme en main : " + armeTxt + 
