@@ -5,13 +5,13 @@
 package Personnages;
 import java.util.ArrayList;
 import Armes.Arme;
+import tp3_heroic_chiera.EtreVivant;
 
 /**
  *
  * @author julie
  */
-public abstract class Personnage {
-
+public abstract class Personnage implements EtreVivant {
     protected String nom;
     protected int niveauVie;
   
@@ -60,6 +60,23 @@ public abstract class Personnage {
         }
 
         System.out.println(nom + " ne possède pas d’arme appelée " + nomArme);
+    }
+    
+   @Override
+    public void seFatiguer() {
+        this.niveauVie -= 10;
+        System.out.println(nom + " se fatigue (-10 vie). Vie restante = " + niveauVie);
+    }
+
+    @Override
+    public boolean estVivant() {
+        return this.niveauVie > 0;
+    }
+
+    @Override
+    public void estAttaque(int points) {
+        this.niveauVie -= points;
+        System.out.println(nom + " est attaqué : -" + points + " vie. Vie restante = " + niveauVie);
     }
     
     @Override
