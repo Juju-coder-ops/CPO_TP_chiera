@@ -13,9 +13,7 @@ public class fenetre_quiz extends javax.swing.JFrame {
     private Question[] questions;
         private int index = 0;
         private int score = 0;
-    /**
-     * Creates new form fenetre_quiz
-     */
+        
     public fenetre_quiz() {
         initComponents();
         questions = new Question[]{
@@ -24,7 +22,8 @@ public class fenetre_quiz extends javax.swing.JFrame {
         new Question("Couleur du ciel ?", "Rouge", "Bleu", "Vert", "Noir", 2),
         new Question("Langage utilisé?", "Java", "Python", "C#", "Ruby", 1),
         new Question("Résultat de 10/2 ?", "4", "5", "6", "2", 2)
-    };
+        };
+    }
     private void afficherQuestionCourante() {
         Question q = questions[index];
 
@@ -42,9 +41,40 @@ public class fenetre_quiz extends javax.swing.JFrame {
         btnRep3.setEnabled(true);
         btnRep4.setEnabled(true);
     }
+    private void gererReponse(int indexRep) {
+        Question q = questions[index];
 
+        if(indexRep == q.getIndexBonneReponse()) {
+            lblFeedback.setText("Bonne réponse !");
+            score++;
+            lblScore.setText("Score : " + score);
+        } else {
+            lblFeedback.setText("Mauvaise réponse !");
+        }
 
+        // désactiver tous les boutons
+        btnRep1.setEnabled(false);
+        btnRep2.setEnabled(false);
+        btnRep3.setEnabled(false);
+        btnRep4.setEnabled(false);
     }
+    private void gererReponse(int indexRep) {
+    Question q = questions[index];
+
+    if(indexRep == q.getIndexBonneReponse()) {
+        lblFeedback.setText("Bonne réponse !");
+        score++;
+        lblScore.setText("Score : " + score);
+    } else {
+        lblFeedback.setText("Mauvaise réponse !");
+    }
+
+    // désactiver tous les boutons
+    btnRep1.setEnabled(false);
+    btnRep2.setEnabled(false);
+    btnRep3.setEnabled(false);
+    btnRep4.setEnabled(false);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,25 +92,50 @@ public class fenetre_quiz extends javax.swing.JFrame {
         btnRep4 = new javax.swing.JButton();
         lblFeedback = new javax.swing.JLabel();
         lblScore = new javax.swing.JLabel();
-        btnSuivante = new javax.swing.JLabel();
+        btnNext = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblQuestions.setText("Questions");
 
         btnRep1.setText("jButton1");
+        btnRep1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRep1ActionPerformed(evt);
+            }
+        });
 
         btnRep2.setText("jButton2");
+        btnRep2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRep2ActionPerformed(evt);
+            }
+        });
 
         btnRep3.setText("jButton3");
+        btnRep3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRep3ActionPerformed(evt);
+            }
+        });
 
         btnRep4.setText("jButton4");
+        btnRep4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRep4ActionPerformed(evt);
+            }
+        });
 
         lblFeedback.setText("feedback");
 
         lblScore.setText("Score");
 
-        btnSuivante.setText("next");
+        btnNext.setText("Next");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,8 +164,8 @@ public class fenetre_quiz extends javax.swing.JFrame {
                         .addComponent(lblFeedback)
                         .addGap(170, 170, 170))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnSuivante)
-                        .addGap(35, 35, 35))))
+                        .addComponent(btnNext)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,14 +184,45 @@ public class fenetre_quiz extends javax.swing.JFrame {
                     .addComponent(btnRep4))
                 .addGap(18, 18, 18)
                 .addComponent(lblFeedback)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                .addComponent(btnSuivante)
-                .addGap(40, 40, 40))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addComponent(btnNext)
+                .addGap(22, 22, 22))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnRep1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep1ActionPerformed
+        gererReponse(1);                                     
+    }//GEN-LAST:event_btnRep1ActionPerformed
+
+    private void btnRep2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep2ActionPerformed
+        gererReponse(2);
+    }//GEN-LAST:event_btnRep2ActionPerformed
+
+    private void btnRep3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep3ActionPerformed
+        gererReponse(3);
+    }//GEN-LAST:event_btnRep3ActionPerformed
+
+    private void btnRep4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep4ActionPerformed
+        gererReponse(4);
+    }//GEN-LAST:event_btnRep4ActionPerformed
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        
+        index++;
+
+        if(index < questions.length) {
+            afficherQuestionCourante();
+        } else {
+            lblQuestions.setText("Quiz terminé !");
+            lblFeedback.setText("Score final : " + score + " / " + questions.length);
+            btnNext.setEnabled(false);
+        }
+    }//GEN-LAST:event_btnNextActionPerformed
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -163,11 +249,11 @@ public class fenetre_quiz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnNext;
     private javax.swing.JButton btnRep1;
     private javax.swing.JButton btnRep2;
     private javax.swing.JButton btnRep3;
     private javax.swing.JButton btnRep4;
-    private javax.swing.JLabel btnSuivante;
     private javax.swing.JLabel lblFeedback;
     private javax.swing.JLabel lblQuestions;
     private javax.swing.JLabel lblScore;
