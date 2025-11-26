@@ -16,6 +16,9 @@ public class fenetre_quiz extends javax.swing.JFrame {
      */
     public fenetre_quiz() {
         initComponents();
+        private Question[] questions;
+        private int indexQuestionCourante = 0;
+        private int score = 0;
     }
 
     /**
@@ -27,17 +30,83 @@ public class fenetre_quiz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblQuestions = new javax.swing.JLabel();
+        btnRep1 = new javax.swing.JButton();
+        btnRep2 = new javax.swing.JButton();
+        btnRep3 = new javax.swing.JButton();
+        btnRep4 = new javax.swing.JButton();
+        lblFeedback = new javax.swing.JLabel();
+        lblScore = new javax.swing.JLabel();
+        btnSuivante = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lblQuestions.setText("Questions");
+
+        btnRep1.setText("jButton1");
+
+        btnRep2.setText("jButton2");
+
+        btnRep3.setText("jButton3");
+
+        btnRep4.setText("jButton4");
+
+        lblFeedback.setText("feedback");
+
+        lblScore.setText("Score");
+
+        btnSuivante.setText("next");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(lblScore)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(105, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblQuestions)
+                        .addGap(159, 159, 159))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnRep1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnRep3))
+                        .addGap(73, 73, 73)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnRep4)
+                            .addComponent(btnRep2))
+                        .addGap(72, 72, 72))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblFeedback)
+                        .addGap(170, 170, 170))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnSuivante)
+                        .addGap(35, 35, 35))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lblScore)
+                .addGap(18, 18, 18)
+                .addComponent(lblQuestions)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRep2)
+                    .addComponent(btnRep1))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRep3)
+                    .addComponent(btnRep4))
+                .addGap(18, 18, 18)
+                .addComponent(lblFeedback)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(btnSuivante)
+                .addGap(40, 40, 40))
         );
 
         pack();
@@ -69,5 +138,13 @@ public class fenetre_quiz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRep1;
+    private javax.swing.JButton btnRep2;
+    private javax.swing.JButton btnRep3;
+    private javax.swing.JButton btnRep4;
+    private javax.swing.JLabel btnSuivante;
+    private javax.swing.JLabel lblFeedback;
+    private javax.swing.JLabel lblQuestions;
+    private javax.swing.JLabel lblScore;
     // End of variables declaration//GEN-END:variables
 }
