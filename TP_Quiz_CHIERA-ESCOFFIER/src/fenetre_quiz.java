@@ -10,15 +10,40 @@
 public class fenetre_quiz extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(fenetre_quiz.class.getName());
-
+    private Question[] questions;
+        private int index = 0;
+        private int score = 0;
     /**
      * Creates new form fenetre_quiz
      */
     public fenetre_quiz() {
         initComponents();
-        private Question[] questions;
-        private int indexQuestionCourante = 0;
-        private int score = 0;
+        questions = new Question[]{
+        new Question("Capitale de la France ?", "Paris", "Madrid", "Berlin", "Rome", 1),
+        new Question("3 x 7 = ?", "20", "21", "18", "25", 2),
+        new Question("Couleur du ciel ?", "Rouge", "Bleu", "Vert", "Noir", 2),
+        new Question("Langage utilisé?", "Java", "Python", "C#", "Ruby", 1),
+        new Question("Résultat de 10/2 ?", "4", "5", "6", "2", 2)
+    };
+    private void afficherQuestionCourante() {
+        Question q = questions[index];
+
+        Question.setText(q.getIntitule());
+        btnRep1.setText(q.getProposition1());
+        btnRep2.setText(q.getProposition2());
+        btnRep3.setText(q.getProposition3());
+        btnRep4.setText(q.getProposition4());
+
+        lblFeedback.setText("");
+
+        // réactiver les boutons
+        btnRep1.setEnabled(true);
+        btnRep2.setEnabled(true);
+        btnRep3.setEnabled(true);
+        btnRep4.setEnabled(true);
+    }
+
+
     }
 
     /**
