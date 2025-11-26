@@ -36,6 +36,29 @@ public class TP2_manip_CHIERA {
         System.out.println("nb de calories de Assiette 1 : " + assiette1.nbCalories);
         System.out.println("nb de calories de Assiette 2 : " + assiette2.nbCalories);
         System.out.println("nb de calories de Assiette 3 : " + assiette3.nbCalories);
+        
+        // swap
+        Tartiflette temp = assiette1;
+        assiette1 = assiette2;
+        assiette2 = temp;
+
+        System.out.println("\nAprès swap des références :");
+        System.out.println("nb de calories de Assiette 1 : " + assiette1.nbCalories);
+        System.out.println("nb de calories de Assiette 2 : " + assiette2.nbCalories);
+    
+        // tableau de 10 références (initialement toutes null)
+        Moussaka[] tab = new Moussaka[10];
+
+        // remplir le tableau avec 10 objets distincts
+        for (int i = 0; i < tab.length; i++) {
+            tab[i] = new Moussaka(100 + i * 10); // par exemple des calories différentes
+        }
+
+        // vérification : afficher les calories
+        System.out.println("\nTableau de Moussaka :");
+        for (int i = 0; i < tab.length; i++) {
+            System.out.println("Moussaka[" + i + "].nbCalories = " + tab[i].nbCalories);
+        }
     }
     
 }
