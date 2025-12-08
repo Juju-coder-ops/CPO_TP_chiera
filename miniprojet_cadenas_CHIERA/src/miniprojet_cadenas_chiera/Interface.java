@@ -12,12 +12,34 @@ package miniprojet_cadenas_chiera;
 public class Interface extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Interface.class.getName());
-
+    private Cadenas jeu;
     /**
      * Creates new form Interface
      */
     public Interface() {
         initComponents();
+        jeu = new Cadenas();
+        texte_score.setText(jeu.getTentativesEffectuees() + " sur " + jeu.getMaxTentatives());
+        texte_intro.setText("Trouvez le bon code en moins de " + jeu.getMaxTentatives() + " tentatives !");
+    }
+   
+    private void mettreAJourChiffre(javax.swing.JLabel label, boolean increment) {
+        if (jeu.estPartieTerminee()) {
+            return;
+        }
+       
+        try {
+            int chiffre = Integer.parseInt(label.getText());
+            if (increment) {
+                chiffre = (chiffre + 1) % 10;
+            } else {
+                chiffre = (chiffre - 1 + 10) % 10;
+            }
+            label.setText(String.valueOf(chiffre));
+        } catch (NumberFormatException e) {
+            label.setText("0");
+        }
+    }
     }
 
     /**
