@@ -1,3 +1,5 @@
+package miniprojet_cadenas_chiera;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -32,14 +34,24 @@ public class Interface extends javax.swing.JFrame {
         up_chiffre_2 = new javax.swing.JButton();
         up_chiffre_3 = new javax.swing.JButton();
         up_chiffre_4 = new javax.swing.JButton();
+        texte_chiffre_0 = new javax.swing.JLabel();
+        texte_chiffre_1 = new javax.swing.JLabel();
+        texte_chiffre_2 = new javax.swing.JLabel();
+        texte_chiffre_3 = new javax.swing.JLabel();
         down_chiffre_1 = new javax.swing.JButton();
         down_chiffre_2 = new javax.swing.JButton();
         down_chiffre_3 = new javax.swing.JButton();
         down_chiffre_4 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        bouton_tester = new javax.swing.JButton();
+        texte_lbl_nb_chiffres_exacts = new javax.swing.JLabel();
+        texte_nb_chiffres_exacts = new javax.swing.JLabel();
+        texte_lbl_nb_chiffres_haut = new javax.swing.JLabel();
+        texte_nb_chiffres_haut = new javax.swing.JLabel();
+        texte_lbl_nb_chiffres_bas = new javax.swing.JLabel();
+        texte_nb_chiffres_bas = new javax.swing.JLabel();
+        texte_score = new javax.swing.JLabel();
+        texte_tentatives = new javax.swing.JLabel();
+        bouton_recommencer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,7 +65,7 @@ public class Interface extends javax.swing.JFrame {
                 up_chiffre_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 60, 20));
+        getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 60, 20));
 
         up_chiffre_2.setText("^");
         up_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
@@ -61,7 +73,7 @@ public class Interface extends javax.swing.JFrame {
                 up_chiffre_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 60, 20));
+        getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 60, 20));
 
         up_chiffre_3.setText("^");
         up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +81,7 @@ public class Interface extends javax.swing.JFrame {
                 up_chiffre_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 60, 20));
+        getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 60, 20));
 
         up_chiffre_4.setText("^");
         up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +89,27 @@ public class Interface extends javax.swing.JFrame {
                 up_chiffre_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, 60, 20));
+        getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 60, 20));
+
+        texte_chiffre_0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texte_chiffre_0.setText("0");
+        texte_chiffre_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(texte_chiffre_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 60, 60));
+
+        texte_chiffre_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texte_chiffre_1.setText("0");
+        texte_chiffre_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 60, 60));
+
+        texte_chiffre_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texte_chiffre_2.setText("0");
+        texte_chiffre_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 60, 60));
+
+        texte_chiffre_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texte_chiffre_3.setText("0");
+        texte_chiffre_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 60, 60));
 
         down_chiffre_1.setText("v");
         down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +117,7 @@ public class Interface extends javax.swing.JFrame {
                 down_chiffre_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(down_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 60, 20));
+        getContentPane().add(down_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 60, 20));
 
         down_chiffre_2.setText("v");
         down_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +125,7 @@ public class Interface extends javax.swing.JFrame {
                 down_chiffre_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 60, 20));
+        getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 60, 20));
 
         down_chiffre_3.setText("v");
         down_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +133,7 @@ public class Interface extends javax.swing.JFrame {
                 down_chiffre_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(down_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 60, 20));
+        getContentPane().add(down_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 60, 20));
 
         down_chiffre_4.setText("v");
         down_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
@@ -109,23 +141,50 @@ public class Interface extends javax.swing.JFrame {
                 down_chiffre_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 60, 20));
+        getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 60, 20));
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 60, 60));
+        bouton_tester.setText("TESTER");
+        bouton_tester.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouton_testerActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("jLabel1");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 60, 60));
+        texte_lbl_nb_chiffres_exacts.setText("Nombre de chiffres exacts : ");
+        getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("jLabel1");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 60, 60));
+        texte_nb_chiffres_exacts.setText("0");
+        getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, -1, -1));
 
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("jLabel1");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 60, 60));
+        texte_lbl_nb_chiffres_haut.setText("Nombre de chiffres trop hauts :");
+        getContentPane().add(texte_lbl_nb_chiffres_haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        texte_nb_chiffres_haut.setText("0");
+        getContentPane().add(texte_nb_chiffres_haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, -1, -1));
+
+        texte_lbl_nb_chiffres_bas.setText("Nombre de chiffres trop bas :");
+        getContentPane().add(texte_lbl_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+
+        texte_nb_chiffres_bas.setText("0");
+        getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, -1, -1));
+
+        texte_score.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texte_score.setText("0 sur 5");
+        texte_score.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 70, 50));
+
+        texte_tentatives.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texte_tentatives.setText("Tentatives");
+        getContentPane().add(texte_tentatives, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 70, -1));
+
+        bouton_recommencer.setText("Recommencer");
+        bouton_recommencer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouton_recommencerActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bouton_recommencer, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -162,6 +221,14 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_down_chiffre_1ActionPerformed
 
+    private void bouton_testerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_testerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bouton_testerActionPerformed
+
+    private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bouton_recommencerActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -188,15 +255,25 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bouton_recommencer;
+    private javax.swing.JButton bouton_tester;
     private javax.swing.JButton down_chiffre_1;
     private javax.swing.JButton down_chiffre_2;
     private javax.swing.JButton down_chiffre_3;
     private javax.swing.JButton down_chiffre_4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel texte_chiffre_0;
+    private javax.swing.JLabel texte_chiffre_1;
+    private javax.swing.JLabel texte_chiffre_2;
+    private javax.swing.JLabel texte_chiffre_3;
     private javax.swing.JLabel texte_intro;
+    private javax.swing.JLabel texte_lbl_nb_chiffres_bas;
+    private javax.swing.JLabel texte_lbl_nb_chiffres_exacts;
+    private javax.swing.JLabel texte_lbl_nb_chiffres_haut;
+    private javax.swing.JLabel texte_nb_chiffres_bas;
+    private javax.swing.JLabel texte_nb_chiffres_exacts;
+    private javax.swing.JLabel texte_nb_chiffres_haut;
+    private javax.swing.JLabel texte_score;
+    private javax.swing.JLabel texte_tentatives;
     private javax.swing.JButton up_chiffre_1;
     private javax.swing.JButton up_chiffre_2;
     private javax.swing.JButton up_chiffre_3;
