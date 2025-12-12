@@ -23,9 +23,14 @@ public class Cadenas {
     private int maxTentatives;     
     private int tentativeCourante;  
 
-    public String getMaxTentatives() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public int getMaxTentatives() {
+        return maxTentatives;
     }
+
+    public String getSecret() {
+        return secret;
+    }
+
     public enum Etat { EN_COURS, GAGNE, PERDU }
     private Etat etat;
     private List<Essai> historique;

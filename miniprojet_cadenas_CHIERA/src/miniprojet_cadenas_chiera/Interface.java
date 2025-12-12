@@ -262,9 +262,10 @@ public class Interface extends javax.swing.JFrame {
                 bouton_tester.setEnabled(false);
             }
             else if (jeu.getEtat() == Cadenas.Etat.PERDU) {
-                texte_intro.setText("Perdu ! Le code était secret...");
+                texte_intro.setText("Perdu ! Le code était : " + jeu.getSecret());
                 bouton_tester.setEnabled(false);
             }
+
         }
         catch (Exception e) {
             texte_intro.setText("Erreur : " + e.getMessage());
