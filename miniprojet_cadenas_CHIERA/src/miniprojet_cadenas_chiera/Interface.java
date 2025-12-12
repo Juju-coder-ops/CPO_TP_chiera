@@ -55,9 +55,13 @@ public class Interface extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        texte_intro.setBackground(new java.awt.Color(255, 255, 255));
+        texte_intro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        texte_intro.setForeground(new java.awt.Color(255, 51, 204));
         texte_intro.setText("Trouver le bon code en moins de 5 Tentatives !");
         getContentPane().add(texte_intro, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 6, -1, -1));
 
+        up_chiffre_1.setBackground(new java.awt.Color(255, 0, 153));
         up_chiffre_1.setText("^");
         up_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +70,7 @@ public class Interface extends javax.swing.JFrame {
         });
         getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 60, 20));
 
+        up_chiffre_2.setBackground(new java.awt.Color(255, 0, 153));
         up_chiffre_2.setText("^");
         up_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +79,7 @@ public class Interface extends javax.swing.JFrame {
         });
         getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 60, 20));
 
+        up_chiffre_3.setBackground(new java.awt.Color(255, 0, 153));
         up_chiffre_3.setText("^");
         up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +88,7 @@ public class Interface extends javax.swing.JFrame {
         });
         getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 60, 20));
 
+        up_chiffre_4.setBackground(new java.awt.Color(255, 0, 153));
         up_chiffre_4.setText("^");
         up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,26 +97,31 @@ public class Interface extends javax.swing.JFrame {
         });
         getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 60, 20));
 
+        texte_chiffre_0.setBackground(new java.awt.Color(255, 204, 255));
         texte_chiffre_0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         texte_chiffre_0.setText("0");
         texte_chiffre_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(texte_chiffre_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 60, 60));
 
+        texte_chiffre_1.setBackground(new java.awt.Color(255, 204, 255));
         texte_chiffre_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         texte_chiffre_1.setText("0");
         texte_chiffre_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 60, 60));
 
+        texte_chiffre_2.setBackground(new java.awt.Color(255, 204, 255));
         texte_chiffre_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         texte_chiffre_2.setText("0");
         texte_chiffre_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 60, 60));
 
+        texte_chiffre_3.setBackground(new java.awt.Color(255, 204, 255));
         texte_chiffre_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         texte_chiffre_3.setText("0");
         texte_chiffre_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 60, 60));
 
+        down_chiffre_1.setBackground(new java.awt.Color(255, 0, 153));
         down_chiffre_1.setText("v");
         down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +130,7 @@ public class Interface extends javax.swing.JFrame {
         });
         getContentPane().add(down_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 60, 20));
 
+        down_chiffre_2.setBackground(new java.awt.Color(255, 0, 153));
         down_chiffre_2.setText("v");
         down_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +139,7 @@ public class Interface extends javax.swing.JFrame {
         });
         getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 60, 20));
 
+        down_chiffre_3.setBackground(new java.awt.Color(255, 0, 153));
         down_chiffre_3.setText("v");
         down_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +148,7 @@ public class Interface extends javax.swing.JFrame {
         });
         getContentPane().add(down_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 60, 20));
 
+        down_chiffre_4.setBackground(new java.awt.Color(255, 0, 153));
         down_chiffre_4.setText("v");
         down_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,6 +157,7 @@ public class Interface extends javax.swing.JFrame {
         });
         getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 60, 20));
 
+        bouton_tester.setBackground(new java.awt.Color(255, 0, 153));
         bouton_tester.setText("TESTER");
         bouton_tester.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,6 +193,7 @@ public class Interface extends javax.swing.JFrame {
         texte_tentatives.setText("Tentatives");
         getContentPane().add(texte_tentatives, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 70, -1));
 
+        bouton_recommencer.setBackground(new java.awt.Color(255, 0, 153));
         bouton_recommencer.setText("Recommencer");
         bouton_recommencer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
