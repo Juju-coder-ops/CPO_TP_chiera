@@ -20,6 +20,10 @@ public class Cadenas {
     private int longueur;          
     private int maxTentatives;     
     private int tentativeCourante;  
+
+    String getMaxTentatives() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     public enum Etat { EN_COURS, GAGNE, PERDU }
     private Etat etat;
     private List<Essai> historique;
