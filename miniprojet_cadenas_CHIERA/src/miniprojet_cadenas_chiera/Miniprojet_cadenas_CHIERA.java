@@ -14,7 +14,6 @@ public class Miniprojet_cadenas_CHIERA {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new.Interface().setVisible(true);
     }
     
 }

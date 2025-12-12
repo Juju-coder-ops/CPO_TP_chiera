@@ -1,4 +1,6 @@
-package miniprojet_cadenas_chiera;
+package Miniprojet_cadenas_CHIERA;
+
+import miniprojet_cadenas_chiera.Cadenas;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,7 +12,7 @@ package miniprojet_cadenas_chiera;
  * @author julie
  */
 public class Interface extends javax.swing.JFrame {
-        private Cadenas jeu = new Cadenas(4, 5); // 4 chiffres, 5 tentatives
+    private Cadenas jeu = new Cadenas(4, 5); // 4 chiffres, 5 tentatives
 
 
     /**
@@ -336,7 +338,4 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton up_chiffre_4;
     // End of variables declaration//GEN-END:variables
 
-    private void setVisible() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

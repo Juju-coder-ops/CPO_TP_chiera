@@ -1,8 +1,10 @@
+package miniprojet_cadenas_chiera;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package miniprojet_cadenas_chiera;
+
 
 /**
  *
@@ -21,7 +23,7 @@ public class Cadenas {
     private int maxTentatives;     
     private int tentativeCourante;  
 
-    String getMaxTentatives() {
+    public String getMaxTentatives() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public enum Etat { EN_COURS, GAGNE, PERDU }
