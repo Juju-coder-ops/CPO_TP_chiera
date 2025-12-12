@@ -14,7 +14,11 @@ import miniprojet_cadenas_chiera.Cadenas;
 public class Interface extends javax.swing.JFrame {
     private Cadenas jeu = new Cadenas(4, 5); // 4 chiffres, 5 tentatives
 
+    public Interface() {
+        initComponents();
+    }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -304,7 +308,6 @@ public class Interface extends javax.swing.JFrame {
                 }
             }
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
