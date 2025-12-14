@@ -1,6 +1,4 @@
-package Miniprojet_cadenas_CHIERA;
-
-import miniprojet_cadenas_chiera.Cadenas;
+package miniprojet_cadenas_chiera;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
