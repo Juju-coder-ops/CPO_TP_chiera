@@ -37,6 +37,7 @@ public class Accueil extends javax.swing.JFrame {
         setTitle("Accueil-Cadenas");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setForeground(new java.awt.Color(255, 0, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("JEU DU CADENAS");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
@@ -45,6 +46,7 @@ public class Accueil extends javax.swing.JFrame {
         jLabel2.setText("Trouvez le code secret avant la fin des tentatives ");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 0, 204));
         jButton1.setText("JOUER");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
