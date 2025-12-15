@@ -1,3 +1,6 @@
+
+import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,7 +11,7 @@
  * @author julie
  */
 public class GameWindow extends javax.swing.JFrame {
-    
+    boolean[][] allume;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GameWindow.class.getName());
 
     /**
@@ -16,6 +19,13 @@ public class GameWindow extends javax.swing.JFrame {
      */
     public GameWindow() {
         initComponents();
+        allume = new boolean[6][6];
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                allume[i][j] = true;
+            }
+}
+
     }
 
     /**
@@ -70,6 +80,11 @@ public class GameWindow extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 204, 255));
         jButton1.setForeground(new java.awt.Color(255, 231, 255));
         jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
 
         jButton2.setText("jButton1");
@@ -213,6 +228,10 @@ public class GameWindow extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jButton1.setBackground(Color.GRAY);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
