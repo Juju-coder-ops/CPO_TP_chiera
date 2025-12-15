@@ -24,8 +24,7 @@ public class GameWindow extends javax.swing.JFrame {
             for (int j = 0; j < 6; j++) {
                 allume[i][j] = true;
             }
-}
-
+        }
     }
 
     /**
@@ -37,201 +36,211 @@ public class GameWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
+        b00 = new javax.swing.JButton();
+        b01 = new javax.swing.JButton();
+        b02 = new javax.swing.JButton();
+        b03 = new javax.swing.JButton();
+        b04 = new javax.swing.JButton();
+        b05 = new javax.swing.JButton();
+        b10 = new javax.swing.JButton();
+        b11 = new javax.swing.JButton();
+        b12 = new javax.swing.JButton();
+        b13 = new javax.swing.JButton();
+        b14 = new javax.swing.JButton();
+        b15 = new javax.swing.JButton();
+        b20 = new javax.swing.JButton();
+        b21 = new javax.swing.JButton();
+        b22 = new javax.swing.JButton();
+        b23 = new javax.swing.JButton();
+        b24 = new javax.swing.JButton();
+        b25 = new javax.swing.JButton();
+        b30 = new javax.swing.JButton();
+        b31 = new javax.swing.JButton();
+        b32 = new javax.swing.JButton();
+        b33 = new javax.swing.JButton();
+        b34 = new javax.swing.JButton();
+        b35 = new javax.swing.JButton();
+        b40 = new javax.swing.JButton();
+        b41 = new javax.swing.JButton();
+        b42 = new javax.swing.JButton();
+        b43 = new javax.swing.JButton();
+        b44 = new javax.swing.JButton();
+        b45 = new javax.swing.JButton();
+        b50 = new javax.swing.JButton();
+        b51 = new javax.swing.JButton();
+        b52 = new javax.swing.JButton();
+        b53 = new javax.swing.JButton();
+        b54 = new javax.swing.JButton();
+        b55 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(6, 6));
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 255));
-        jButton1.setForeground(new java.awt.Color(255, 231, 255));
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        b00.setBackground(new java.awt.Color(255, 204, 255));
+        b00.setForeground(new java.awt.Color(255, 231, 255));
+        b00.setText("jButton1");
+        b00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                b00ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
+        getContentPane().add(b00);
 
-        jButton2.setText("jButton1");
-        getContentPane().add(jButton2);
+        b01.setText("jButton1");
+        getContentPane().add(b01);
 
-        jButton3.setBackground(new java.awt.Color(255, 204, 255));
-        jButton3.setForeground(new java.awt.Color(255, 231, 255));
-        jButton3.setText("jButton1");
-        getContentPane().add(jButton3);
+        b02.setBackground(new java.awt.Color(255, 204, 255));
+        b02.setForeground(new java.awt.Color(255, 231, 255));
+        b02.setText("jButton1");
+        getContentPane().add(b02);
 
-        jButton4.setText("jButton1");
-        getContentPane().add(jButton4);
+        b03.setText("jButton1");
+        b03.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b03ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(b03);
 
-        jButton5.setBackground(new java.awt.Color(255, 204, 255));
-        jButton5.setForeground(new java.awt.Color(255, 231, 255));
-        jButton5.setText("jButton1");
-        getContentPane().add(jButton5);
+        b04.setBackground(new java.awt.Color(255, 204, 255));
+        b04.setForeground(new java.awt.Color(255, 231, 255));
+        b04.setText("jButton1");
+        getContentPane().add(b04);
 
-        jButton6.setText("jButton1");
-        getContentPane().add(jButton6);
+        b05.setText("jButton1");
+        getContentPane().add(b05);
 
-        jButton7.setText("jButton1");
-        getContentPane().add(jButton7);
+        b10.setText("jButton1");
+        getContentPane().add(b10);
 
-        jButton8.setBackground(new java.awt.Color(255, 204, 255));
-        jButton8.setForeground(new java.awt.Color(255, 231, 255));
-        jButton8.setText("jButton1");
-        getContentPane().add(jButton8);
+        b11.setBackground(new java.awt.Color(255, 204, 255));
+        b11.setForeground(new java.awt.Color(255, 231, 255));
+        b11.setText("jButton1");
+        getContentPane().add(b11);
 
-        jButton9.setText("jButton1");
-        getContentPane().add(jButton9);
+        b12.setText("jButton1");
+        getContentPane().add(b12);
 
-        jButton10.setBackground(new java.awt.Color(255, 204, 255));
-        jButton10.setForeground(new java.awt.Color(255, 231, 255));
-        jButton10.setText("jButton1");
-        getContentPane().add(jButton10);
+        b13.setBackground(new java.awt.Color(255, 204, 255));
+        b13.setForeground(new java.awt.Color(255, 231, 255));
+        b13.setText("jButton1");
+        getContentPane().add(b13);
 
-        jButton11.setText("jButton1");
-        getContentPane().add(jButton11);
+        b14.setText("jButton1");
+        getContentPane().add(b14);
 
-        jButton12.setBackground(new java.awt.Color(255, 204, 255));
-        jButton12.setForeground(new java.awt.Color(255, 231, 255));
-        jButton12.setText("jButton1");
-        getContentPane().add(jButton12);
+        b15.setBackground(new java.awt.Color(255, 204, 255));
+        b15.setForeground(new java.awt.Color(255, 231, 255));
+        b15.setText("jButton1");
+        getContentPane().add(b15);
 
-        jButton13.setBackground(new java.awt.Color(255, 204, 255));
-        jButton13.setForeground(new java.awt.Color(255, 231, 255));
-        jButton13.setText("jButton1");
-        getContentPane().add(jButton13);
+        b20.setBackground(new java.awt.Color(255, 204, 255));
+        b20.setForeground(new java.awt.Color(255, 231, 255));
+        b20.setText("jButton1");
+        getContentPane().add(b20);
 
-        jButton14.setText("jButton1");
-        getContentPane().add(jButton14);
+        b21.setText("jButton1");
+        getContentPane().add(b21);
 
-        jButton15.setBackground(new java.awt.Color(255, 204, 255));
-        jButton15.setForeground(new java.awt.Color(255, 231, 255));
-        jButton15.setText("jButton1");
-        getContentPane().add(jButton15);
+        b22.setBackground(new java.awt.Color(255, 204, 255));
+        b22.setForeground(new java.awt.Color(255, 231, 255));
+        b22.setText("jButton1");
+        getContentPane().add(b22);
 
-        jButton16.setText("jButton1");
-        getContentPane().add(jButton16);
+        b23.setText("jButton1");
+        getContentPane().add(b23);
 
-        jButton17.setBackground(new java.awt.Color(255, 204, 255));
-        jButton17.setForeground(new java.awt.Color(255, 231, 255));
-        jButton17.setText("jButton1");
-        getContentPane().add(jButton17);
+        b24.setBackground(new java.awt.Color(255, 204, 255));
+        b24.setForeground(new java.awt.Color(255, 231, 255));
+        b24.setText("jButton1");
+        getContentPane().add(b24);
 
-        jButton18.setText("jButton1");
-        getContentPane().add(jButton18);
+        b25.setText("jButton1");
+        getContentPane().add(b25);
 
-        jButton19.setText("jButton1");
-        getContentPane().add(jButton19);
+        b30.setText("jButton1");
+        getContentPane().add(b30);
 
-        jButton20.setBackground(new java.awt.Color(255, 204, 255));
-        jButton20.setForeground(new java.awt.Color(255, 231, 255));
-        jButton20.setText("jButton1");
-        getContentPane().add(jButton20);
+        b31.setBackground(new java.awt.Color(255, 204, 255));
+        b31.setForeground(new java.awt.Color(255, 231, 255));
+        b31.setText("jButton1");
+        getContentPane().add(b31);
 
-        jButton21.setText("jButton1");
-        getContentPane().add(jButton21);
+        b32.setText("jButton1");
+        getContentPane().add(b32);
 
-        jButton22.setBackground(new java.awt.Color(255, 204, 255));
-        jButton22.setForeground(new java.awt.Color(255, 231, 255));
-        jButton22.setText("jButton1");
-        getContentPane().add(jButton22);
+        b33.setBackground(new java.awt.Color(255, 204, 255));
+        b33.setForeground(new java.awt.Color(255, 231, 255));
+        b33.setText("jButton1");
+        getContentPane().add(b33);
 
-        jButton23.setText("jButton1");
-        getContentPane().add(jButton23);
+        b34.setText("jButton1");
+        getContentPane().add(b34);
 
-        jButton24.setBackground(new java.awt.Color(255, 204, 255));
-        jButton24.setForeground(new java.awt.Color(255, 231, 255));
-        jButton24.setText("jButton1");
-        getContentPane().add(jButton24);
+        b35.setBackground(new java.awt.Color(255, 204, 255));
+        b35.setForeground(new java.awt.Color(255, 231, 255));
+        b35.setText("jButton1");
+        getContentPane().add(b35);
 
-        jButton25.setBackground(new java.awt.Color(255, 204, 255));
-        jButton25.setForeground(new java.awt.Color(255, 231, 255));
-        jButton25.setText("jButton1");
-        getContentPane().add(jButton25);
+        b40.setBackground(new java.awt.Color(255, 204, 255));
+        b40.setForeground(new java.awt.Color(255, 231, 255));
+        b40.setText("jButton1");
+        getContentPane().add(b40);
 
-        jButton26.setText("jButton1");
-        getContentPane().add(jButton26);
+        b41.setText("jButton1");
+        getContentPane().add(b41);
 
-        jButton27.setBackground(new java.awt.Color(255, 204, 255));
-        jButton27.setForeground(new java.awt.Color(255, 231, 255));
-        jButton27.setText("jButton1");
-        getContentPane().add(jButton27);
+        b42.setBackground(new java.awt.Color(255, 204, 255));
+        b42.setForeground(new java.awt.Color(255, 231, 255));
+        b42.setText("jButton1");
+        getContentPane().add(b42);
 
-        jButton28.setText("jButton1");
-        getContentPane().add(jButton28);
+        b43.setText("jButton1");
+        getContentPane().add(b43);
 
-        jButton29.setBackground(new java.awt.Color(255, 204, 255));
-        jButton29.setForeground(new java.awt.Color(255, 231, 255));
-        jButton29.setText("jButton1");
-        getContentPane().add(jButton29);
+        b44.setBackground(new java.awt.Color(255, 204, 255));
+        b44.setForeground(new java.awt.Color(255, 231, 255));
+        b44.setText("jButton1");
+        getContentPane().add(b44);
 
-        jButton30.setText("jButton1");
-        getContentPane().add(jButton30);
+        b45.setText("jButton1");
+        getContentPane().add(b45);
 
-        jButton31.setText("jButton1");
-        getContentPane().add(jButton31);
+        b50.setText("jButton1");
+        getContentPane().add(b50);
 
-        jButton32.setBackground(new java.awt.Color(255, 204, 255));
-        jButton32.setForeground(new java.awt.Color(255, 231, 255));
-        jButton32.setText("jButton1");
-        getContentPane().add(jButton32);
+        b51.setBackground(new java.awt.Color(255, 204, 255));
+        b51.setForeground(new java.awt.Color(255, 231, 255));
+        b51.setText("jButton1");
+        getContentPane().add(b51);
 
-        jButton33.setText("jButton1");
-        getContentPane().add(jButton33);
+        b52.setText("jButton1");
+        getContentPane().add(b52);
 
-        jButton34.setBackground(new java.awt.Color(255, 204, 255));
-        jButton34.setForeground(new java.awt.Color(255, 231, 255));
-        jButton34.setText("jButton1");
-        getContentPane().add(jButton34);
+        b53.setBackground(new java.awt.Color(255, 204, 255));
+        b53.setForeground(new java.awt.Color(255, 231, 255));
+        b53.setText("jButton1");
+        getContentPane().add(b53);
 
-        jButton35.setText("jButton1");
-        getContentPane().add(jButton35);
+        b54.setText("jButton1");
+        getContentPane().add(b54);
 
-        jButton36.setBackground(new java.awt.Color(255, 204, 255));
-        jButton36.setForeground(new java.awt.Color(255, 231, 255));
-        jButton36.setText("jButton1");
-        getContentPane().add(jButton36);
+        b55.setBackground(new java.awt.Color(255, 204, 255));
+        b55.setForeground(new java.awt.Color(255, 231, 255));
+        b55.setText("jButton1");
+        getContentPane().add(b55);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jButton1.setBackground(Color.GRAY);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void b00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b00ActionPerformed
+        allume[0][0] = false;
+        b00.setBackground(Color.GRAY);
+    }//GEN-LAST:event_b00ActionPerformed
+
+    private void b03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b03ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b03ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -259,41 +268,41 @@ public class GameWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton b00;
+    private javax.swing.JButton b01;
+    private javax.swing.JButton b02;
+    private javax.swing.JButton b03;
+    private javax.swing.JButton b04;
+    private javax.swing.JButton b05;
+    private javax.swing.JButton b10;
+    private javax.swing.JButton b11;
+    private javax.swing.JButton b12;
+    private javax.swing.JButton b13;
+    private javax.swing.JButton b14;
+    private javax.swing.JButton b15;
+    private javax.swing.JButton b20;
+    private javax.swing.JButton b21;
+    private javax.swing.JButton b22;
+    private javax.swing.JButton b23;
+    private javax.swing.JButton b24;
+    private javax.swing.JButton b25;
+    private javax.swing.JButton b30;
+    private javax.swing.JButton b31;
+    private javax.swing.JButton b32;
+    private javax.swing.JButton b33;
+    private javax.swing.JButton b34;
+    private javax.swing.JButton b35;
+    private javax.swing.JButton b40;
+    private javax.swing.JButton b41;
+    private javax.swing.JButton b42;
+    private javax.swing.JButton b43;
+    private javax.swing.JButton b44;
+    private javax.swing.JButton b45;
+    private javax.swing.JButton b50;
+    private javax.swing.JButton b51;
+    private javax.swing.JButton b52;
+    private javax.swing.JButton b53;
+    private javax.swing.JButton b54;
+    private javax.swing.JButton b55;
     // End of variables declaration//GEN-END:variables
 }
