@@ -33,6 +33,11 @@ public class GameWindow extends javax.swing.JFrame {
 
         // Initialiser le tableau de boutons
         initButtonsArray();
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                buttons[i][j].setPreferredSize(new java.awt.Dimension(80, 80));
+            }
+        }
         currentLevel = 1;
         loadLevel(currentLevel);
 
@@ -665,19 +670,27 @@ public class GameWindow extends javax.swing.JFrame {
     }
 
 
-
     private void updateBoardUI() {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
+
+                buttons[i][j].setText(""); // ← IMPORTANT
+
                 if (board.isLit(i, j)) {
-                    buttons[i][j].setBackground(Color.PINK);
+                    buttons[i][j].setBackground(new Color(255, 204, 255)); // rose doux
                 } else {
-                    buttons[i][j].setBackground(Color.GRAY);
+                    buttons[i][j].setBackground(new Color(200, 200, 200)); // gris clair
                 }
+
+                buttons[i][j].setOpaque(true);
+                buttons[i][j].setBorderPainted(false);
             }
         }
-        buttons[knight.getRow()][knight.getCol()].setBackground(Color.BLUE);
+
+        // Cavalier
+        buttons[knight.getRow()][knight.getCol()].setBackground(new Color(80, 80, 255));
     }
+
 
 
     private void handleMove(int r, int c) {
