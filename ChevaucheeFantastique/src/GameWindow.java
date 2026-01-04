@@ -11,7 +11,9 @@ import java.awt.Color;
  * @author julie
  */
 public class GameWindow extends javax.swing.JFrame {
-    boolean[][] allume;
+    private Board board;
+    private Knight knight;
+    private javax.swing.JButton[][] buttons;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GameWindow.class.getName());
 
     /**
@@ -19,13 +21,16 @@ public class GameWindow extends javax.swing.JFrame {
      */
     public GameWindow() {
         initComponents();
-        allume = new boolean[6][6];
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 6; j++) {
-                allume[i][j] = true;
-            }
-        }
+
+        board = new Board(6, 6);
+        knight = new Knight(0, 0);
+
+        board.turnOff(0, 0);
+
+        initButtonsArray();
+        updateBoardUI();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -305,4 +310,33 @@ public class GameWindow extends javax.swing.JFrame {
     private javax.swing.JButton b54;
     private javax.swing.JButton b55;
     // End of variables declaration//GEN-END:variables
+
+    private void initButtonsArray() {
+        buttons = new javax.swing.JButton[][]{
+            {b00, b01, b02, b03, b04, b05},
+            {b10, b11, b12, b13, b14, b15},
+            {b20, b21, b22, b23, b24, b25},
+            {b30, b31, b32, b33, b34, b35},
+            {b40, b41, b42, b43, b44, b45},
+            {b50, b51, b52, b53, b54, b55}
+        };
+    }
+
+
+    private void updateBoardUI() {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+
+                if (board.isLit(i, j)) {
+                    buttons[i][j].setBackground(Color.PINK);
+                } else {
+                    buttons[i][j].setBackground(Color.GRAY);
+                }
+            }
+        }
+
+        // Cavalier en bleu
+        buttons[knight.getRow()][knight.getCol()].setBackground(Color.BLUE);
+    }
+
 }
