@@ -95,11 +95,21 @@ public class GameWindow extends javax.swing.JFrame {
         getContentPane().add(b00);
 
         b01.setText("jButton1");
+        b01.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b01ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b01);
 
         b02.setBackground(new java.awt.Color(255, 204, 255));
         b02.setForeground(new java.awt.Color(255, 231, 255));
         b02.setText("jButton1");
+        b02.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b02ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b02);
 
         b03.setText("jButton1");
@@ -113,33 +123,73 @@ public class GameWindow extends javax.swing.JFrame {
         b04.setBackground(new java.awt.Color(255, 204, 255));
         b04.setForeground(new java.awt.Color(255, 231, 255));
         b04.setText("jButton1");
+        b04.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b04ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b04);
 
         b05.setText("jButton1");
+        b05.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b05ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b05);
 
         b10.setText("jButton1");
+        b10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b10ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b10);
 
         b11.setBackground(new java.awt.Color(255, 204, 255));
         b11.setForeground(new java.awt.Color(255, 231, 255));
         b11.setText("jButton1");
+        b11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b11ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b11);
 
         b12.setText("jButton1");
+        b12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b12ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b12);
 
         b13.setBackground(new java.awt.Color(255, 204, 255));
         b13.setForeground(new java.awt.Color(255, 231, 255));
         b13.setText("jButton1");
+        b13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b13ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b13);
 
         b14.setText("jButton1");
+        b14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b14ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b14);
 
         b15.setBackground(new java.awt.Color(255, 204, 255));
         b15.setForeground(new java.awt.Color(255, 231, 255));
         b15.setText("jButton1");
+        b15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b15ActionPerformed(evt);
+            }
+        });
         getContentPane().add(b15);
 
         b20.setBackground(new java.awt.Color(255, 204, 255));
@@ -246,8 +296,48 @@ public class GameWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_b00ActionPerformed
 
     private void b03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b03ActionPerformed
-           handleMove(0, 3);
+        handleMove(0, 3);
     }//GEN-LAST:event_b03ActionPerformed
+
+    private void b01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b01ActionPerformed
+        handleMove(0, 1);
+    }//GEN-LAST:event_b01ActionPerformed
+
+    private void b02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b02ActionPerformed
+        handleMove(0, 2);
+    }//GEN-LAST:event_b02ActionPerformed
+
+    private void b04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b04ActionPerformed
+        handleMove(0, 4);
+    }//GEN-LAST:event_b04ActionPerformed
+
+    private void b05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b05ActionPerformed
+        handleMove(0, 5);
+    }//GEN-LAST:event_b05ActionPerformed
+
+    private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
+        handleMove(1, 0);
+    }//GEN-LAST:event_b10ActionPerformed
+
+    private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
+        handleMove(1, 1);
+    }//GEN-LAST:event_b11ActionPerformed
+
+    private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
+        handleMove(1, 2);
+    }//GEN-LAST:event_b12ActionPerformed
+
+    private void b13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13ActionPerformed
+        handleMove(1, 3);
+    }//GEN-LAST:event_b13ActionPerformed
+
+    private void b14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b14ActionPerformed
+        handleMove(1, 4);
+    }//GEN-LAST:event_b14ActionPerformed
+
+    private void b15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b15ActionPerformed
+        handleMove(1, 5);
+    }//GEN-LAST:event_b15ActionPerformed
 
     /**
      * @param args the command line arguments
