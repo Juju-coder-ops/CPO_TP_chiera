@@ -361,7 +361,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b45);
 
-        b50.setText("jButton1");
         b50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b50ActionPerformed(evt);
