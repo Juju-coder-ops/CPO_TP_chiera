@@ -56,7 +56,11 @@ public class GameWindow extends javax.swing.JFrame {
         // Panel pour les boutons de contrôle
         javax.swing.JPanel controlPanel = new javax.swing.JPanel();
         javax.swing.JButton restartButton = new javax.swing.JButton("Recommencer");
+        restartButton.setFocusPainted(false);
+        restartButton.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+        restartButton.setBackground(new Color(230, 230, 230));
         restartButton.addActionListener(e -> loadLevel(currentLevel));
+
         controlPanel.add(restartButton);
 
         // Panel principal qui contient le damier et les contrôles
