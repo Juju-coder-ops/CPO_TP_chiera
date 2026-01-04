@@ -15,6 +15,8 @@ public class GameWindow extends javax.swing.JFrame {
     private Board board;
     private Knight knight;
     private javax.swing.JButton[][] buttons;
+    private int currentLevel = 1; // le niveau courant
+    private javax.swing.JButton restartButton;
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GameWindow.class.getName());
 
@@ -22,16 +24,51 @@ public class GameWindow extends javax.swing.JFrame {
      * Creates new form GameWindow
      */
     public GameWindow() {
-        initComponents();
+        initComponents(); // NetBeans init
 
+        // Initialiser le plateau et le cavalier
         board = new Board(6, 6);
         knight = new Knight(0, 0);
+        board.turnOff(0, 0); // case initiale du cavalier
 
-        board.turnOff(0, 0);
-
+        // Initialiser le tableau de boutons
         initButtonsArray();
+        currentLevel = 1;
+        loadLevel(currentLevel);
+
+
+        // Panel pour le damier
+        javax.swing.JPanel boardPanel = new javax.swing.JPanel();
+        boardPanel.setLayout(new java.awt.GridLayout(6, 6));
+
+        // Ajouter les boutons du damier au panel
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                boardPanel.add(buttons[i][j]);
+            }
+        }
+
+        // Panel pour les boutons de contrôle
+        javax.swing.JPanel controlPanel = new javax.swing.JPanel();
+        javax.swing.JButton restartButton = new javax.swing.JButton("Recommencer");
+        restartButton.addActionListener(e -> loadLevel(currentLevel));
+        controlPanel.add(restartButton);
+
+        // Panel principal qui contient le damier et les contrôles
+        javax.swing.JPanel mainPanel = new javax.swing.JPanel();
+        mainPanel.setLayout(new java.awt.BorderLayout());
+        mainPanel.add(boardPanel, java.awt.BorderLayout.CENTER);
+        mainPanel.add(controlPanel, java.awt.BorderLayout.SOUTH);
+
+        // Remplacer le content pane actuel
+        getContentPane().removeAll();
+        getContentPane().add(mainPanel);
+
+        // Mettre à jour l'UI
         updateBoardUI();
+        pack(); // ajuster la taille de la fenêtre
     }
+
 
 
 
@@ -630,6 +667,41 @@ public class GameWindow extends javax.swing.JFrame {
         };
     }
     
+    
+    private void loadLevel(int level) {
+        // Toujours 6x6
+        board = new Board(6, 6);
+        knight = new Knight(0, 0);
+        board.turnOff(0, 0); // case initiale du cavalier
+
+        // Griser certaines cases selon le niveau
+        switch (level) {
+            case 1: // Facile
+                // aucune case supplémentaire éteinte
+                break;
+            case 2: // Moyen
+                board.turnOff(1, 1);
+                board.turnOff(2, 3);
+                board.turnOff(4, 0);
+                break;
+            case 3: // Difficile
+                board.turnOff(1, 1);
+                board.turnOff(2, 3);
+                board.turnOff(4, 0);
+                board.turnOff(3, 4);
+                board.turnOff(5, 2);
+                board.turnOff(0, 5);
+                break;
+            default:
+                // si tu veux plus de niveaux, ajoute ici
+                break;
+        }
+
+        updateBoardUI(); // mettre à jour les couleurs
+    }
+
+
+
     private void updateBoardUI() {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
@@ -645,22 +717,19 @@ public class GameWindow extends javax.swing.JFrame {
 
 
     private void handleMove(int r, int c) {
-
-        if (!knight.isValidMove(r, c)) {
-            return;
-        }
-
-        if (!board.isLit(r, c)) {
-            return;
-        }
+        if (!knight.isValidMove(r, c)) return; // Vérifier mouvement cavalier
+        if (!board.isLit(r, c)) return;       // Vérifier si case allumée
 
         knight.moveTo(r, c);
         board.turnOff(r, c);
-
         updateBoardUI();
 
         if (board.allOff()) {
-            javax.swing.JOptionPane.showMessageDialog(this, "Bravo 🎉");
+            javax.swing.JOptionPane.showMessageDialog(this, "Bravo 🎉 Niveau terminé !");
+            currentLevel++;       // passer au niveau suivant
+            if (currentLevel > 3) currentLevel = 1; // revenir au niveau 1 si plus de niveaux
+            loadLevel(currentLevel);
         }
     }
+
 }
