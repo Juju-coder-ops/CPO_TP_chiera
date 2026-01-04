@@ -123,7 +123,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b00.setBackground(new java.awt.Color(255, 204, 255));
         b00.setForeground(new java.awt.Color(255, 231, 255));
-        b00.setText("jButton1");
         b00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b00ActionPerformed(evt);
@@ -131,7 +130,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b00);
 
-        b01.setText("jButton1");
         b01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b01ActionPerformed(evt);
@@ -141,7 +139,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b02.setBackground(new java.awt.Color(255, 204, 255));
         b02.setForeground(new java.awt.Color(255, 231, 255));
-        b02.setText("jButton1");
         b02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b02ActionPerformed(evt);
@@ -149,7 +146,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b02);
 
-        b03.setText("jButton1");
         b03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b03ActionPerformed(evt);
@@ -159,7 +155,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b04.setBackground(new java.awt.Color(255, 204, 255));
         b04.setForeground(new java.awt.Color(255, 231, 255));
-        b04.setText("jButton1");
         b04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b04ActionPerformed(evt);
@@ -167,7 +162,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b04);
 
-        b05.setText("jButton1");
         b05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b05ActionPerformed(evt);
@@ -175,7 +169,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b05);
 
-        b10.setText("jButton1");
         b10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b10ActionPerformed(evt);
@@ -185,7 +178,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b11.setBackground(new java.awt.Color(255, 204, 255));
         b11.setForeground(new java.awt.Color(255, 231, 255));
-        b11.setText("jButton1");
         b11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b11ActionPerformed(evt);
@@ -193,7 +185,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b11);
 
-        b12.setText("jButton1");
         b12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b12ActionPerformed(evt);
@@ -203,7 +194,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b13.setBackground(new java.awt.Color(255, 204, 255));
         b13.setForeground(new java.awt.Color(255, 231, 255));
-        b13.setText("jButton1");
         b13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b13ActionPerformed(evt);
@@ -211,7 +201,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b13);
 
-        b14.setText("jButton1");
         b14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b14ActionPerformed(evt);
@@ -221,7 +210,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b15.setBackground(new java.awt.Color(255, 204, 255));
         b15.setForeground(new java.awt.Color(255, 231, 255));
-        b15.setText("jButton1");
         b15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b15ActionPerformed(evt);
@@ -231,7 +219,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b20.setBackground(new java.awt.Color(255, 204, 255));
         b20.setForeground(new java.awt.Color(255, 231, 255));
-        b20.setText("jButton1");
         b20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b20ActionPerformed(evt);
@@ -239,7 +226,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b20);
 
-        b21.setText("jButton1");
         b21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b21ActionPerformed(evt);
@@ -249,7 +235,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b22.setBackground(new java.awt.Color(255, 204, 255));
         b22.setForeground(new java.awt.Color(255, 231, 255));
-        b22.setText("jButton1");
         b22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b22ActionPerformed(evt);
@@ -257,7 +242,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b22);
 
-        b23.setText("jButton1");
         b23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b23ActionPerformed(evt);
@@ -267,7 +251,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b24.setBackground(new java.awt.Color(255, 204, 255));
         b24.setForeground(new java.awt.Color(255, 231, 255));
-        b24.setText("jButton1");
         b24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b24ActionPerformed(evt);
@@ -275,7 +258,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b24);
 
-        b25.setText("jButton1");
         b25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b25ActionPerformed(evt);
@@ -283,7 +265,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b25);
 
-        b30.setText("jButton1");
         b30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b30ActionPerformed(evt);
@@ -293,7 +274,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b31.setBackground(new java.awt.Color(255, 204, 255));
         b31.setForeground(new java.awt.Color(255, 231, 255));
-        b31.setText("jButton1");
         b31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b31ActionPerformed(evt);
@@ -301,7 +281,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b31);
 
-        b32.setText("jButton1");
         b32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b32ActionPerformed(evt);
@@ -311,7 +290,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b33.setBackground(new java.awt.Color(255, 204, 255));
         b33.setForeground(new java.awt.Color(255, 231, 255));
-        b33.setText("jButton1");
         b33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b33ActionPerformed(evt);
@@ -319,7 +297,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b33);
 
-        b34.setText("jButton1");
         b34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b34ActionPerformed(evt);
@@ -329,7 +306,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b35.setBackground(new java.awt.Color(255, 204, 255));
         b35.setForeground(new java.awt.Color(255, 231, 255));
-        b35.setText("jButton1");
         b35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b35ActionPerformed(evt);
@@ -339,7 +315,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b40.setBackground(new java.awt.Color(255, 204, 255));
         b40.setForeground(new java.awt.Color(255, 231, 255));
-        b40.setText("jButton1");
         b40.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b40ActionPerformed(evt);
@@ -347,7 +322,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b40);
 
-        b41.setText("jButton1");
         b41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b41ActionPerformed(evt);
@@ -357,7 +331,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b42.setBackground(new java.awt.Color(255, 204, 255));
         b42.setForeground(new java.awt.Color(255, 231, 255));
-        b42.setText("jButton1");
         b42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b42ActionPerformed(evt);
@@ -365,7 +338,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b42);
 
-        b43.setText("jButton1");
         b43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b43ActionPerformed(evt);
@@ -375,7 +347,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b44.setBackground(new java.awt.Color(255, 204, 255));
         b44.setForeground(new java.awt.Color(255, 231, 255));
-        b44.setText("jButton1");
         b44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b44ActionPerformed(evt);
@@ -383,7 +354,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b44);
 
-        b45.setText("jButton1");
         b45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b45ActionPerformed(evt);
@@ -401,7 +371,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b51.setBackground(new java.awt.Color(255, 204, 255));
         b51.setForeground(new java.awt.Color(255, 231, 255));
-        b51.setText("jButton1");
         b51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b51ActionPerformed(evt);
@@ -409,7 +378,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b51);
 
-        b52.setText("jButton1");
         b52.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b52ActionPerformed(evt);
@@ -419,7 +387,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b53.setBackground(new java.awt.Color(255, 204, 255));
         b53.setForeground(new java.awt.Color(255, 231, 255));
-        b53.setText("jButton1");
         b53.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b53ActionPerformed(evt);
@@ -427,7 +394,6 @@ public class GameWindow extends javax.swing.JFrame {
         });
         getContentPane().add(b53);
 
-        b54.setText("jButton1");
         b54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b54ActionPerformed(evt);
@@ -437,7 +403,6 @@ public class GameWindow extends javax.swing.JFrame {
 
         b55.setBackground(new java.awt.Color(255, 204, 255));
         b55.setForeground(new java.awt.Color(255, 231, 255));
-        b55.setText("jButton1");
         b55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b55ActionPerformed(evt);
