@@ -11,9 +11,11 @@ import java.awt.Color;
  * @author julie
  */
 public class GameWindow extends javax.swing.JFrame {
+
     private Board board;
     private Knight knight;
     private javax.swing.JButton[][] buttons;
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GameWindow.class.getName());
 
     /**
@@ -30,6 +32,7 @@ public class GameWindow extends javax.swing.JFrame {
         initButtonsArray();
         updateBoardUI();
     }
+
 
 
     /**
@@ -239,12 +242,11 @@ public class GameWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void b00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b00ActionPerformed
-        allume[0][0] = false;
-        b00.setBackground(Color.GRAY);
+        handleMove(0, 0);
     }//GEN-LAST:event_b00ActionPerformed
 
     private void b03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b03ActionPerformed
-        // TODO add your handling code here:
+           handleMove(0, 3);
     }//GEN-LAST:event_b03ActionPerformed
 
     /**
@@ -310,7 +312,7 @@ public class GameWindow extends javax.swing.JFrame {
     private javax.swing.JButton b54;
     private javax.swing.JButton b55;
     // End of variables declaration//GEN-END:variables
-
+    
     private void initButtonsArray() {
         buttons = new javax.swing.JButton[][]{
             {b00, b01, b02, b03, b04, b05},
@@ -321,12 +323,10 @@ public class GameWindow extends javax.swing.JFrame {
             {b50, b51, b52, b53, b54, b55}
         };
     }
-
-
+    
     private void updateBoardUI() {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
-
                 if (board.isLit(i, j)) {
                     buttons[i][j].setBackground(Color.PINK);
                 } else {
@@ -334,9 +334,27 @@ public class GameWindow extends javax.swing.JFrame {
                 }
             }
         }
-
-        // Cavalier en bleu
         buttons[knight.getRow()][knight.getCol()].setBackground(Color.BLUE);
     }
 
+
+    private void handleMove(int r, int c) {
+
+        if (!knight.isValidMove(r, c)) {
+            return;
+        }
+
+        if (!board.isLit(r, c)) {
+            return;
+        }
+
+        knight.moveTo(r, c);
+        board.turnOff(r, c);
+
+        updateBoardUI();
+
+        if (board.allOff()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Bravo 🎉");
+        }
+    }
 }
