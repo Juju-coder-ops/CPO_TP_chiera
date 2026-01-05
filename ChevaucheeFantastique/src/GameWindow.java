@@ -1,8 +1,5 @@
 
 import java.awt.Color;
-import javax.swing.ImageIcon;
-import java.awt.Image;
-
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -779,13 +776,11 @@ public class GameWindow extends javax.swing.JFrame {
             }
         }
 
-        // Cavalier : ajouter une icône sur le bouton du cavalier
-        ImageIcon knightIcon = new ImageIcon(getClass().getResource("/knight.png"));
-        buttons[knight.getRow()][knight.getCol()].setIcon(knightIcon);
-
-        // Si tu veux, tu peux enlever le fond bleu pour que seule l'icône ressorte
-        buttons[knight.getRow()][knight.getCol()].setBackground(new Color(255, 204, 255));
-
+        // Mettre l'emoji cheval sur la case du cavalier
+        buttons[knight.getRow()][knight.getCol()].setText("🐎");  
+        buttons[knight.getRow()][knight.getCol()].setFont(new java.awt.Font("Segoe UI Emoji", 24, 24)); // police emoji
+        buttons[knight.getRow()][knight.getCol()].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        buttons[knight.getRow()][knight.getCol()].setVerticalAlignment(javax.swing.SwingConstants.CENTER);
     }
 
 
