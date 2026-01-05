@@ -1,5 +1,8 @@
 
 import java.awt.Color;
+import javax.swing.ImageIcon;
+import java.awt.Image;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -40,6 +43,17 @@ public class GameWindow extends javax.swing.JFrame {
 
         updateBoardUI();
     }
+
+        public GameWindow(int startLevel) {
+        initComponents(); // obligatoire en mode Design
+        setResizable(false);
+        setLocationRelativeTo(null);
+
+        currentLevel = startLevel;
+        loadLevel(currentLevel);
+        updateBoardUI();
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -765,8 +779,13 @@ public class GameWindow extends javax.swing.JFrame {
             }
         }
 
-        // Cavalier
-        buttons[knight.getRow()][knight.getCol()].setBackground(new Color(80, 80, 255));
+        // Cavalier : ajouter une icône sur le bouton du cavalier
+        ImageIcon knightIcon = new ImageIcon(getClass().getResource("/knight.png"));
+        buttons[knight.getRow()][knight.getCol()].setIcon(knightIcon);
+
+        // Si tu veux, tu peux enlever le fond bleu pour que seule l'icône ressorte
+        buttons[knight.getRow()][knight.getCol()].setBackground(new Color(255, 204, 255));
+
     }
 
 
